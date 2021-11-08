@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>code_mx</title>
+
+  <style>
+   .nav{
+     text-align: center;
+     margin: 2px;
+     width: 100%;
+     height: 43px;
+     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+     border-radius:10px;
+   }
+   #codes{
+     background-color: white;
+     width: 98%;
+     min-height: 280px;
+     border-radius: 14px;
+     border:2px solid black;
+     outline: 0;
+   }
+   main{
+     text-align: center;
+   }
+   #button{
+     display:flex;
+     justify-content:space-evenly ;
+   }
+   #button button{
+     width:47%;
+     border-radius: 12px;
+     border:0px;
+     padding: 12px;
+   }
+   #remove{
+     background-color: red;
+     color: white;
+   }
+   #ply{
+     background-color: black;
+     color: white;
+   }
+   #m{
+     padding: 10px;
+     border-bottom: 2px solid #5F9EA0;
+     margin: 8px 0px;
+     font-weight: bold;
+   }
+   
+     
+   nav img{
+     
+    transform: translate(0%,4%);
+     width: 40px;
+     height: 40px;
+  
+    border-radius:50%;
+   }  
+   
+  </style>
+</head>
+<body>
+  <nav class="nav">
+   <img src="code.png"/>
+  </nav>
+ <main>
+   <textarea id="codes"></textarea>
+   <div id="button">
+     <button id="remove">حدف</button>
+     <button id="ply">تشغيل</button>
+   </div>
+   <p id="m">Result</p>
+ </main>
+    <div id="result"></div>
+  <script>
+   let codes = document.getElementById("codes");
+   let ply = document.getElementById("ply");
+   let remove = document.getElementById("remove");
+   let result = document.getElementById("result");
+   ply.onclick = ()=>{
+     result.innerHTML = codes.value;
+    localStorage.setItem("RESULT" , codes.value);
+    };
+   remove.onclick = ()=>{
+     result.innerHTML ="";
+    }
+   onload = ()=>{
+     codes.value = localStorage.setItem("RESULT");
+   }
+  </script>
+</body>
+</html>
