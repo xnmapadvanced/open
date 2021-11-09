@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fruktur&family=Irish+Grover&display=swap" rel="stylesheet">
+<title>mohammed</title>
+    <style>
+    body{
+      background: linear-gradient(to right, #232526, #414345);
+    }
+      .nav{
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        border-radius: 10px;
+      }
+      .nav button{
+        font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;
+        width: 20%;
+        border: 0px;
+        padding: 4px 4px;
+        background-color: red;
+        color: white;
+      float: right;
+      margin: 8px;
+      border-radius: 13px;
+      }
+      .div{
+        transform: translate(14%,0%);
+        background-color: black;
+        width: 80%;
+        height: 200px;
+        box-shadow: 10px 10px 20px black,-10px -10px 20px black;
+        border-radius: 10px;
+      }
+      #mxd{
+        font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;
+        text-align: center;
+        color: white;
+      }
+     img{
+       border-radius: 10px;
+        width: 100%;
+        height: 100px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <button id="arabic">AR</button>
+      <button id="english">EN</button>
+     
+    </nav>
+    <br>
+    <div class="div">
+      <img src="M2.gif"/>
+      <h4 id="mxd">I'm mohamed from morocco</h4>
+    </div>
+     
+    <script>
+      let arabic = document.getElementById("arabic");
+      let english = document.getElementById("english");
+let mxd = document.getElementById("mxd");
+      
+      arabic.onclick = ()=>{
+        xnmap("arabic");
+        localStorage.setItem("mxd","arabic");
+      };
+      
+      english.onclick = ()=>{
+        xnmap("english");
+        localStorage.setItem("mxd","eglish");
+      };
+      onload = ()=>{
+        xnmap(localStorage.getItem("mxd"));
+      };
+       function xnmap(getLanuage){
+        if(getLanuage === "arabic"){
+          mxd.innerHTML = "انا محمد من المغرب";
+          
+        }else if(getLanuage === "english"){
+          
+          mxd.innerHTML ="I'm mohamed from morocco";
+        }
+      }
+    </script>
+  </body>
+</html>
