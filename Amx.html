@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai&family=Fruktur&family=Irish+Grover&family=Mochiy+Pop+P+One&family=Permanent+Marker&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+<title>Amx</title>
+    <style>
+    
+  body{ 
+    background: linear-gradient(to right, #1d4350, #a43931);
+animation-name: xnmap; 
+animation-duration: 5s; 
+animation-iteration-count:infinite; 
+} 
+@keyframes xnmap{
+
+0%{background: linear-gradient(to right, #000000, #434343); 
+}
+20%{
+  background: linear-gradient(to right, #403a3e, #be5869);
+}
+30%{
+  
+}
+
+} 
+    
+    
+      #xnmap_box{
+        background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+        border-radius: 10px;
+        width: 400px;
+        height: 300px;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      #mx_box{
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 340px;
+        height: 240px;
+        text-align: center;
+        background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+        border: 3px solid black;
+        border-radius: 10px;
+      }
+      #time{
+        width: 100%;
+        height: 200px;
+        color: white;
+        line-height: 200px;
+      }
+      #date{
+        
+        
+        height: 40px;
+        color: white;
+        border-radius: 10px;
+        
+      }
+      #setTime,#setData{
+        color: #ADFF2F;
+        margin: 0%;
+        font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <main id="xnmap_box">
+      <main id="mx_box">
+        <article id="time">
+          <h2 id="setTime">23:00</h2>
+        </article>
+        <article id="date">
+          <p id="setData">11-11-2021</p>
+        </article>
+        <article id="color">
+         
+        </article>
+      </main>
+    </main>
+    <script >
+    function updateDate(){
+        var date = new Date();
+       var setTime = document.getElementById("setTime");
+      setTime.innerHTML = date.getHours() + ":" + date.getMinutes()+":"+date.getSeconds();
+       var setData = document.getElementById("setData");
+       setData.innerHTML = date.getDate()+"-"+ parseInt(date.getMonth()+1)+"-"+date.getFullYear()
+      }
+       
+      setInterval(updateDate,100);
+       onload = updateDate();
+      
+   </script>
+  </body>
+</html>
