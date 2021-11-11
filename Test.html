@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai&family=Fruktur&family=Irish+Grover&family=Mochiy+Pop+P+One&family=Permanent+Marker&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+  <head>
+    <style>
+    *{
+      margin: 0;
+    }
+    #body{
+      background: linear-gradient(to right, #a8ff78, #78ffd6);
+      
+    }
+      #xnmap{
+        border-radius: 10px;
+        
+        width: 360px;
+        background-color:#ff0084;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+      header{
+        text-align: center;
+        
+      }
+      header img{
+        width: 100%;
+        
+      }
+      header h2{
+        color: white;
+        font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+      }
+      header p{
+        font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+        color: white;
+        margin: 14px 14px;
+      }
+      #content{
+        background-color: #F0FFF0;
+        border-radius: 0px 0px 10px 10px;
+        
+      }
+      #buttons{
+        display: flex;
+        justify-content:center;
+        padding-top: 20px;
+      }
+      
+      #buttons img{
+        width: 45px;
+        height: 45px;
+        margin: 0 15px ;
+      }
+      #con{
+        text-align: center;
+      }
+      #con input{
+        width: 50%;
+      }
+      input[type="range" i]{
+        -webkit-appearance: none;
+        background: linear-gradient(to right, #a8ff78, #78ffd6);
+        height: 4px;
+        margin: 0%;
+      }
+      h2{
+        margin: 15px 0%;
+        font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+      }
+      
+     button{
+       transform: translate(22%,0%);
+       width: 40%;
+       border: 0px;
+       background: linear-gradient(to right, #f953c6, #b91d73); 
+       color: white;
+       font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+     }
+    #mrt{
+      font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+    }
+    #HM{
+      color:white;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      margin:8px 0px;
+      text-align: center;
+      font-family: 'Almarai', sans-serif;font-family: 'Fruktur', cursive;font-family: 'Irish Grover', cursive;font-family: 'Mochiy Pop P One', sans-serif;font-family: 'Permanent Marker', cursive;font-family: 'Roboto Slab', serif;
+    }
+    #HM h4{
+      
+        transform: translate(0%,50%);
+        
+    }
+    </style>
+  </head>
+  <body id="body">
+    <nav id="HM">
+      <h4>XNMAP</h4>
+      </nav>
+    <br>
+    <main id="xnmap">
+      <header>
+        <img src="Mm.png" alt="">
+        <h2>music xnmap</h2>
+        <p id="title_radio">music xnmap</p>
+      </header>
+      <div id="content">
+        <article id="buttons">
+        <img src="2.png" id="ne">
+         <img src="4.png" id="play_pause">
+          <img src="1.png" id="next">
+          <audio src="H.mp3" id="audio_file"></audio>
+      </article>
+      <article id="con">
+        <h2>the sound</h2>
+        <input type="range" id="volume_xnmap">
+        <h2>the speed</h2>
+        <input type="range" id="volume_nasa" max="200" min="0">
+      </article>
+      <br>
+      <marquee id="mrt">
+        <p>music advanced xnmap</p>
+      </marquee>
+      <br>
+        <a href="https://www.facebook.com/profile.php?id=100050747200591">
+          <button>facebook</button>
+        </a>
+      
+        <a href="https://wa.me/+212689601654?text=hello">
+          <button>whatsapp</button>
+        </a>
+      
+      
+        
+      </div>
+      
+    </main>
+    <script>
+      class xnmap{
+        constructor(){
+          var xnmap = document.getElementById("xnmap");
+          xnmap.style.height = screen.height + "px";
+          if(screen.width<500){
+            xnmap.style.width = screen.width + "px";
+          }
+          var heightdiv = document.getElementById("content");
+          heightdiv.style.height  = screen.width + "px";
+        }
+      };
+      onload = new xnmap();
+      ////class xnmap(){}
+      class Audio_Play{
+        constructor(){
+          this.audio_file = document.getElementById("audio_file");
+          this.title_audio = document.getElementById("title_radio");
+          this.play_pause_button = document.getElementById("play_pause");
+          this.isPlayed;
+          this.play_pause_button.addEventListener("click", ()=>{
+            this.play_pause();
+          });
+          
+          this.names_radio =[];
+          this.names_radio[0]="music usa1";
+          this.names_radio [1]="music usa2";
+          this.names_radio [2]="music usa3";
+          
+          this.source_audio =[];
+          this.source_audio[0]="2.mp3";
+          this.source_audio[1]="1.mp3";
+          this.source_audio[2]="3.mp3";
+          this.server =0;
+          this.setxnmap();
+          
+          document.getElementById("next").addEventListener("click",()=>{
+            if(this.server<this.source_audio.length-1){
+              ++this.server;
+              this.isPlayed=false;
+            }else{
+              this.server=0;
+            }
+            this.setxnmap();
+          });
+          document.getElementById("ne").addEventListener("click",()=>{
+            if(this.server>0){
+              --this.server;
+              this.isPlayed=false;
+            }else{
+              this.server=this.source_audio.length-1;
+            }
+            this.setxnmap();
+          });
+          
+        }
+        setxnmap(){
+          this.audio_file.src = this.source_audio[this.server];
+          this.title_audio.innerHTML = this.names_radio[this.server ];
+          this.play_pause();
+        }
+        play_pause(){
+          if(this.isPlayed == false){
+            this.play_pause_button.src = "6.png";
+            this.audio_file.play();
+            this.isPlayed=true;
+          }else{
+            this.audio_file.pause();
+      
+            this.isPlayed=false;
+          }
+        }
+}
+      onload = new Audio_Play();
+      
+      ///xnmap 
+      
+      class music{
+        constructor(){
+          this.audio_file = document.getElementById("audio_file");
+          this.audio_file.volume = 50/100;
+          this.volume_xnmap = document.getElementById("volume_xnmap");
+          this.volume_xnmap.addEventListener("change",()=>{
+            this.audio_file.volume = this.volume_xnmap.value/100;
+          });
+          this.volume_nasa = document.getElementById("volume_nasa");
+          
+          this.volume_nasa.playbackRate = 1;
+          this.volume_nasa.addEventListener("change",()=>{
+            this.audio_file.playbackRate = this.volume_nasa.value /100;
+          });
+        }
+      }
+      onload = new music();
+    </script>
+  </body>
+</html>
